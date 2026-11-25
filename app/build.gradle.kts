@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    // plugin KSP imprescindible para procesar las anotaciones de Room
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,6 +39,17 @@ android {
 }
 
 dependencies {
+    // … las que trae la plantilla, sin tocarlas …
+    debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // - Dependencias añadidas a mano para Percha -
+    // Room: runtime (la librería), ktx (soporte de corrutinas y Flow) y
+    // compiler, que se usa con ksp( .) porque solo trabaja al compilar.
+    val roomVersion = "2.8.5"
+    implementation("androidx.room:room-runtime:${roomVersion}")
+    implementation("androidx.room:room-ktx:${roomVersion}")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
