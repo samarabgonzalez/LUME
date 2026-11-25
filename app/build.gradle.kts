@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lume"
+    namespace = "com.samara.lume"
     compileSdk {
         version = release(37)
     }

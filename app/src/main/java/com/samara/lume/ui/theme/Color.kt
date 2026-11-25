@@ -1,4 +1,4 @@
-package com.example.lume.ui.theme
+package com.samara.lume.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.example.lume
+package com.samara.lume
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

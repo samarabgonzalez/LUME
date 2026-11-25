@@ -1,4 +1,4 @@
-package com.example.lume
+package com.samara.lume
 
 import org.junit.Test
 

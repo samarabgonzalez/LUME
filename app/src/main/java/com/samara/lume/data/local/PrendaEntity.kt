@@ -1,4 +1,4 @@
-package com.example.lume.data.local
+package com.samara.lume.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
